@@ -2,8 +2,28 @@
 
 //Complete this algo
 const isLoop = (linkedlist) => {
+  //if the tail.next doesn't point to null then it has a loop
+  let visited =[]
+  //if(linkedlist.tail.next !== null) return true
+
+  let currentNode = linkedlist.head
+
+  while(currentNode){
+    if(visited.includes(currentNode)) return true
+    else{
+      visited.push(currentNode)
+    }
+    currentNode = currentNode.next
+  }
+
+
+
+  return false
+
 
 };
+
+//[p|data|n]<-->
 
 
 /*
